@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainCameraFragment">
+    tools:context=".MainActivity"
+    android:gravity="center">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="아무튼 카메라임"
-        android:textSize="50dp"
-        android:gravity="center"/>
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="400dp"
+        android:layout_height="600dp">
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="10dp"/>
 
-</FrameLayout>
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"/>
+
+    </FrameLayout>
+
+</LinearLayout>
